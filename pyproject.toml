@@ -1,0 +1,57 @@
+[build-system]
+requires = ["uv_build>=0.11.21,<0.12.0"]
+build-backend = "uv_build"
+
+[project]
+name = "agent-kit"
+version = "0.1.0"
+description = "智能体工程学模板与同步工具：AGENT.md + .agents 体系的单一源头。"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[project.scripts]
+agent-kit = "agent_kit.cli:main"
+
+[project.optional-dependencies]
+dev = [
+    "ruff",
+    "pyright",
+    "pytest",
+]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 88
+src = ["src"]
+
+[tool.ruff.lint]
+select = [
+    "B",   # flake8-bugbear
+    "C4",  # flake8-comprehensions
+    "E",   # pycodestyle (errors)
+    "F",   # pyflakes
+    "I",   # isort
+    "RUF", # Ruff-specific rules
+    "SIM", # flake8-simplify
+    "UP",  # pyupgrade
+    "W",   # pycodestyle (warnings)
+]
+# 中文文案允许使用全角标点
+allowed-confusables = ["，", "。", "、", "：", "；", "（", "）", "！", "？", "「", "」", "“", "”", "—", "→"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["agent_kit"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.pyright]
+typeCheckingMode = "strict"
+pythonVersion = "3.12"
+venvPath = "."
+venv = ".venv"
+
+[tool.uv.build-backend]
+module-root = "src"
+module-name = "agent_kit"
