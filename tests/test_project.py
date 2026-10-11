@@ -34,6 +34,8 @@ def test_detect_reads_pyproject(tmp_path: Path) -> None:
         "write-tests",
         "write-docs",
         "write-skill",
+        "init-project",
+        "setup-cicd",
     ]
 
 

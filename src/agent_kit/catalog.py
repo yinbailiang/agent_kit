@@ -23,6 +23,8 @@ CATALOG: tuple[Skill, ...] = (
     Skill("write-tests", "编写测试"),
     Skill("write-docs", "编写文档"),
     Skill("write-skill", "创建通用技能"),
+    Skill("init-project", "初始化新项目"),
+    Skill("setup-cicd", "配置 GitHub CI/CD"),
     Skill("publish", "项目发布", enabled_by_default=False),
 )
 

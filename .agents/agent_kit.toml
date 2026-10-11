@@ -23,4 +23,4 @@ extras = [
 ]
 
 [skills]
-enabled = ["modify-core-api", "pre-commit-check", "write-tests", "write-docs", "write-skill"]
+enabled = ["modify-core-api", "pre-commit-check", "write-tests", "write-docs", "write-skill", "init-project", "setup-cicd"]

@@ -23,7 +23,9 @@
     │   ├── pre-commit-check.md
     │   ├── write-tests.md
     │   ├── write-docs.md
-    │   └── write-skill.md
+    │   ├── write-skill.md
+    │   ├── init-project.md
+    │   └── setup-cicd.md
     ├── MEMORY/                   # 跨会话记忆（memorys/ 不入库）
     └── TEMP_FILES/               # 会话临时文件（tmps/ 不入库）
 ```
