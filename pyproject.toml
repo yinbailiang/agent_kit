@@ -4,14 +4,46 @@ build-backend = "uv_build"
 
 [project]
 name = "agent-kit"
-version = "0.1.0"
+version = "1.0.0"
 description = "智能体工程学模板与同步工具：AGENT.md + .agents 体系的单一源头。"
 readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE.md"]
+authors = [
+    { name = "infinity_system: yin_bailiang" }
+]
+keywords = [
+    "agent",
+    "agent-engineering",
+    "templates",
+    "scaffolding",
+    "developer-tools",
+    "cli",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Software Development :: Code Generators",
+    "Typing :: Typed",
+]
 requires-python = ">=3.12"
 dependencies = []
 
 [project.scripts]
 agent-kit = "agent_kit.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/yinbailiang/agent_kit"
+Repository = "https://github.com/yinbailiang/agent_kit"
+Issues = "https://github.com/yinbailiang/agent_kit/issues"
+Changelog = "https://github.com/yinbailiang/agent_kit/releases"
 
 [project.optional-dependencies]
 test = [

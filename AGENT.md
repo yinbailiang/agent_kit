@@ -15,7 +15,8 @@ agent-kit 为 AI 编程助手提供结构化的引导体系。
 │   ├── write-docs.md             #   编写文档
 │   ├── write-skill.md            #   创建通用技能
 │   ├── init-project.md           #   初始化新项目
-│   └── setup-cicd.md             #   配置 GitHub CI/CD
+│   ├── setup-cicd.md             #   配置 GitHub CI/CD
+│   └── publish.md                #   项目发布
 ├── MEMORY/
 │   ├── MEMORY_RULE.md            # 记忆管理技能
 │   └── memorys/                  #   运行时记忆存储（跨会话持久化）
@@ -29,7 +30,7 @@ agent-kit 为 AI 编程助手提供结构化的引导体系。
 | 模块 | 技能 | 持久性 |
 | --- | --- | --- |
 | `FOR_AGENT.md` | 编码铁律、类型安全、代码约定 | 静态规则 |
-| `SKILLS/` | 修改核心 API、审查前检查、编写测试、编写文档、创建通用技能、初始化新项目、配置 GitHub CI/CD | 静态规则 |
+| `SKILLS/` | 修改核心 API、审查前检查、编写测试、编写文档、创建通用技能、初始化新项目、配置 GitHub CI/CD、项目发布 | 静态规则 |
 | `MEMORY/` | 跨会话记忆：记住用户偏好、历史决策、已知问题 | 跨会话持久 |
 | `TEMP_FILES/` | 临时产物管理：中间文件、草稿、调试输出 | 会话内有效 |
 

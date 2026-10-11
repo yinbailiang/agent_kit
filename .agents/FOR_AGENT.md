@@ -76,3 +76,4 @@
 | 创建通用技能 | [write-skill.md](SKILLS/write-skill.md) |
 | 初始化新项目 | [init-project.md](SKILLS/init-project.md) |
 | 配置 GitHub CI/CD | [setup-cicd.md](SKILLS/setup-cicd.md) |
+| 项目发布 | [publish.md](SKILLS/publish.md) |
