@@ -15,9 +15,12 @@ agent-kit = "agent_kit.cli:main"
 
 [project.optional-dependencies]
 dev = [
-    "ruff",
-    "pyright",
+    "interrogate",
+    "pre-commit",
     "pytest",
+    "pytest-cov",
+    "pyright",
+    "ruff",
 ]
 
 [tool.ruff]
@@ -51,6 +54,16 @@ typeCheckingMode = "strict"
 pythonVersion = "3.12"
 venvPath = "."
 venv = ".venv"
+
+[tool.interrogate]
+fail-under = 90
+ignore-init-method = true
+ignore-init-module = true
+ignore-magic = true
+ignore-private = true
+ignore-semiprivate = true
+ignore-nested-functions = true
+exclude = ["tests"]
 
 [tool.uv.build-backend]
 module-root = "src"

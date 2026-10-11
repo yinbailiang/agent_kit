@@ -84,20 +84,14 @@ uv run agent-kit list
 - **前端无关**：不引入 YAML 头、特定工具名等任一端专属格式（见 `write-skill` 技能）
 - **可校验**：`update --check` 可接入各项目 CI，发现规则漂移
 
-## 接入状态
-
-| 项目 | 状态 |
-| --- | --- |
-| event_bus | 原版（本仓模板的设计来源；后续可按本仓配置反向接入） |
-| pyscanf | 已接入 |
-| psyche | 旧版副本，待迁移 |
-| 其他 neo 项目 | 待接入 |
-
 ## 开发
 
 ```bash
 uv sync --extra dev
-uv run ruff format . && uv run ruff check .
-uv run pytest -q
-uv run pyright
+uv run pre-commit install              # 可选：每次提交自动运行质量门
+uv run pre-commit run --all-files      # 全量本地质量门
 ```
+
+质量门由 `.pre-commit-config.yaml` 定义（ruff / pyright / interrogate / 覆盖率）；
+其中 `agent-kit-check` 钩子校验受管文件（`AGENT.md`、`.agents/`）必须与模板渲染
+结果一致——直接修改受管文件或改动模板后忘记 `update` 都会被阻止提交。

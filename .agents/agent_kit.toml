@@ -1,0 +1,24 @@
+# agent_kit 项目配置（由 agent-kit 生成；可手工微调，改动在下次 update 时生效）
+kit_version = 1
+
+[project]
+name = "agent-kit"
+summary = "智能体工程学模板与同步工具：AGENT.md + .agents 体系的单一源头。"
+package = "agent_kit"
+src_dir = "src/agent_kit"
+repo_url = ""
+pypi_name = ""
+extra_sources = []
+
+[toolchain]
+setup = "uv sync --extra dev && uv run pre-commit install"
+lint = "uv run ruff check ."
+format = "uv run ruff format ."
+typecheck = "uv run pyright"
+test = "uv run pytest --cov=agent_kit --cov-fail-under=90 -q"
+extras = [
+  "uv run agent-kit update --check :: 规则漂移检查（受管文件须与模板一致）",
+]
+
+[skills]
+enabled = ["modify-core-api", "pre-commit-check", "write-tests", "write-docs", "write-skill"]

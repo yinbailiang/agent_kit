@@ -12,3 +12,10 @@ wheels/
 # Tooling caches
 .ruff_cache/
 .pytest_cache/
+.coverage
+
+# Agent runtime data
+.agents/MEMORY/memorys/*
+.agents/TEMP_FILES/tmps/*
+!.agents/MEMORY/memorys/.gitkeep
+!.agents/TEMP_FILES/tmps/.gitkeep
