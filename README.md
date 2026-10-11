@@ -32,19 +32,25 @@
 
 ## 快速开始
 
-```bash
-cd /home/yinbailiang/Desktop/InfinitySystem/neo/agent_kit
-uv sync                    # 首次：准备工具环境
+用 [uv](https://docs.astral.sh/uv/) 直接运行（无需克隆本仓）：
 
+```bash
 # 安装到目标项目
-uv run agent-kit install --target /path/to/project
+uvx agent-kit install --target /path/to/project
 
 # 更新（模板演进后同步到项目；memorys/ 与 tmps/ 永不触碰）
-uv run agent-kit update --target /path/to/project
-uv run agent-kit update --target /path/to/project --check   # 仅检查漂移（退出码 1 = 有漂移）
+uvx agent-kit update --target /path/to/project
+uvx agent-kit update --target /path/to/project --check   # 仅检查漂移（退出码 1 = 有漂移）
 
 # 查看技能目录
-uv run agent-kit list
+uvx agent-kit list
+```
+
+长期使用建议持久安装，之后直接调用 `agent-kit`：
+
+```bash
+uv tool install agent-kit
+agent-kit install --target /path/to/project
 ```
 
 ## 配置
@@ -90,6 +96,7 @@ uv run agent-kit list
 
 ```bash
 uv sync --extra dev
+uv run agent-kit list                  # 从源码运行 CLI
 uv run pre-commit install              # 可选：每次提交自动运行质量门
 uv run pre-commit run --all-files      # 全量本地质量门
 ```
