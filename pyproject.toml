@@ -14,11 +14,14 @@ dependencies = []
 agent-kit = "agent_kit.cli:main"
 
 [project.optional-dependencies]
-dev = [
-    "interrogate",
-    "pre-commit",
+test = [
     "pytest",
     "pytest-cov",
+]
+dev = [
+    "agent-kit[test]",
+    "interrogate",
+    "pre-commit",
     "pyright",
     "ruff",
 ]

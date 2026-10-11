@@ -27,7 +27,7 @@
 | 对外说明与用法 | `README.md` |
 | 实际代码结构与实现 | `src/agent_kit/` |
 | 测试范例与共享 fixture | `tests/` |
-
+| `.github/workflows/` | CI/CD 质量门与发布流程 |
 
 ## 变更铁律
 

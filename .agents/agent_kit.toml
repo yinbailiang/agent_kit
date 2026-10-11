@@ -8,7 +8,9 @@ package = "agent_kit"
 src_dir = "src/agent_kit"
 repo_url = ""
 pypi_name = ""
-extra_sources = []
+extra_sources = [
+  ".github/workflows/ :: CI/CD 质量门与发布流程",
+]
 
 [toolchain]
 setup = "uv sync --extra dev && uv run pre-commit install"

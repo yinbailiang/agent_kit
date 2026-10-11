@@ -95,3 +95,7 @@ uv run pre-commit run --all-files      # 全量本地质量门
 质量门由 `.pre-commit-config.yaml` 定义（ruff / pyright / interrogate / 覆盖率）；
 其中 `agent-kit-check` 钩子校验受管文件（`AGENT.md`、`.agents/`）必须与模板渲染
 结果一致——直接修改受管文件或改动模板后忘记 `update` 都会被阻止提交。
+
+CI（`.github/workflows/test.yml`）在三个平台 × Python 3.12/3.13/3.14 上运行相同
+质量门；推送 `v*` 标签触发 `.github/workflows/publish.yml` 构建并发布到 PyPI
+（Trusted Publisher，需先在 PyPI 注册受信发布者）。
