@@ -3,37 +3,6 @@ revision = 3
 requires-python = ">=3.12"
 
 [[package]]
-name = "agent-kit"
-version = "1.0.0"
-source = { editable = "." }
-
-[package.optional-dependencies]
-dev = [
-    { name = "interrogate" },
-    { name = "pre-commit" },
-    { name = "pyright" },
-    { name = "pytest" },
-    { name = "pytest-cov" },
-    { name = "ruff" },
-]
-test = [
-    { name = "pytest" },
-    { name = "pytest-cov" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "agent-kit", extras = ["test"], marker = "extra == 'dev'" },
-    { name = "interrogate", marker = "extra == 'dev'" },
-    { name = "pre-commit", marker = "extra == 'dev'" },
-    { name = "pyright", marker = "extra == 'dev'" },
-    { name = "pytest", marker = "extra == 'test'" },
-    { name = "pytest-cov", marker = "extra == 'test'" },
-    { name = "ruff", marker = "extra == 'dev'" },
-]
-provides-extras = ["test", "dev"]
-
-[[package]]
 name = "attrs"
 version = "26.1.0"
 source = { registry = "https://pypi.org/simple" }
@@ -194,6 +163,37 @@ sdist = { url = "https://files.pythonhosted.org/packages/53/35/d70c0006c7cee6599
 wheels = [
     { url = "https://files.pythonhosted.org/packages/fa/70/fffc9613501877c0a10a1ef73a165e6ded3e53f6e7502227fef56d973933/identify-2.6.20-py2.py3-none-any.whl", hash = "sha256:6a16b69b93187244e0548cbfd25b3e4a6f9a7a2ad784625c3bec2b8d27b81aaa", size = 99506, upload-time = "2026-09-26T20:29:06.054Z" },
 ]
+
+[[package]]
+name = "infinity-agent-kit"
+version = "1.0.0"
+source = { editable = "." }
+
+[package.optional-dependencies]
+dev = [
+    { name = "interrogate" },
+    { name = "pre-commit" },
+    { name = "pyright" },
+    { name = "pytest" },
+    { name = "pytest-cov" },
+    { name = "ruff" },
+]
+test = [
+    { name = "pytest" },
+    { name = "pytest-cov" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "infinity-agent-kit", extras = ["test"], marker = "extra == 'dev'" },
+    { name = "interrogate", marker = "extra == 'dev'" },
+    { name = "pre-commit", marker = "extra == 'dev'" },
+    { name = "pyright", marker = "extra == 'dev'" },
+    { name = "pytest", marker = "extra == 'test'" },
+    { name = "pytest-cov", marker = "extra == 'test'" },
+    { name = "ruff", marker = "extra == 'dev'" },
+]
+provides-extras = ["test", "dev"]
 
 [[package]]
 name = "iniconfig"

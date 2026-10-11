@@ -7,7 +7,7 @@ summary = "智能体工程学模板与同步工具：AGENT.md + .agents 体系�
 package = "agent_kit"
 src_dir = "src/agent_kit"
 repo_url = "https://github.com/yinbailiang/agent_kit"
-pypi_name = "agent-kit"
+pypi_name = "infinity-agent-kit"
 extra_sources = [
   ".github/workflows/ :: CI/CD 质量门与发布流程",
 ]

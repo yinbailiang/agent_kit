@@ -177,10 +177,10 @@ agent-kit 静态规则 → GitHub CI/CD。
 
 6. **接入 agent-kit**（静态规则由模板统一同步，禁止手写 `.agents/`）：
 
-   - 把 `agent-kit` 加入 dev 依赖（未发布 PyPI 前用 git 源）：
+   - 把 `infinity-agent-kit` 加入 dev 依赖（开发期可用 git 源）：
 
      ```toml
-     agent-kit = { git = "https://github.com/yinbailiang/agent_kit" }
+     infinity-agent-kit = { git = "https://github.com/yinbailiang/agent_kit" }
      ```
 
    - 安装并写入配置：

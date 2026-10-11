@@ -3,7 +3,7 @@ requires = ["uv_build>=0.11.21,<0.12.0"]
 build-backend = "uv_build"
 
 [project]
-name = "agent-kit"
+name = "infinity-agent-kit"
 version = "1.0.0"
 description = "智能体工程学模板与同步工具：AGENT.md + .agents 体系的单一源头。"
 readme = "README.md"
@@ -51,7 +51,7 @@ test = [
     "pytest-cov",
 ]
 dev = [
-    "agent-kit[test]",
+    "infinity-agent-kit[test]",
     "interrogate",
     "pre-commit",
     "pyright",

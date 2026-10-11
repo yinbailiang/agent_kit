@@ -56,7 +56,7 @@
 8. **验证发布**
 
    ```bash
-   uv pip install --index-url https://pypi.org/simple/ agent-kit==<新版本号>
+   uv pip install --index-url https://pypi.org/simple/ infinity-agent-kit==<新版本号>
    ```
 
 ## 注意事项

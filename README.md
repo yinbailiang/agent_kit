@@ -32,24 +32,25 @@
 
 ## 快速开始
 
-用 [uv](https://docs.astral.sh/uv/) 直接运行（无需克隆本仓）：
+用 [uv](https://docs.astral.sh/uv/) 直接运行（无需克隆本仓；PyPI 包名
+`infinity-agent-kit`，命令行名 `agent-kit`）：
 
 ```bash
 # 安装到目标项目
-uvx agent-kit install --target /path/to/project
+uvx --from infinity-agent-kit agent-kit install --target /path/to/project
 
 # 更新（模板演进后同步到项目；memorys/ 与 tmps/ 永不触碰）
-uvx agent-kit update --target /path/to/project
-uvx agent-kit update --target /path/to/project --check   # 仅检查漂移（退出码 1 = 有漂移）
+uvx --from infinity-agent-kit agent-kit update --target /path/to/project
+uvx --from infinity-agent-kit agent-kit update --target /path/to/project --check   # 仅检查漂移（退出码 1 = 有漂移）
 
 # 查看技能目录
-uvx agent-kit list
+uvx --from infinity-agent-kit agent-kit list
 ```
 
 长期使用建议持久安装，之后直接调用 `agent-kit`：
 
 ```bash
-uv tool install agent-kit
+uv tool install infinity-agent-kit
 agent-kit install --target /path/to/project
 ```
 
