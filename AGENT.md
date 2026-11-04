@@ -1,7 +1,6 @@
 # Agent Instructions
 
 agent-kit 为 AI 编程助手提供结构化的引导体系。
-**在开始任何编码工作前，必须完整阅读 `.agents/` 目录下的所有指引文件。**
 
 ## 引导目录
 
